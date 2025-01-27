@@ -338,6 +338,27 @@ main {
   transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
 }
 
+:root {
+  --clr-fg-alt: #333; /* Default light mode foreground color */
+}
+
+body.dark {
+  --clr-fg-alt: #f5f5f5; /* Light text for dark mode */
+}
+
+body.dark .project__stack-item {
+  color: var(--clr-primary);
+  background-color: #ffffff; /* Darker background for each tech item */
+  border: 1px solid #666; /* Subtle border for dark mode */
+  transition: background-color 0.3s, transform 0.3s; /* Retain smooth transitions */
+}
+
+body.dark .project__stack-item:hover {
+  background-color: #555; /* Slightly lighter hover effect in dark mode */
+  transform: scale(1.05); /* Subtle scaling for hover */
+}
+
+
 .project__stack-item:hover {
   background-color: var(--clr-primary); /* Change background on hover */
   color: white; /* Change text color */
@@ -352,18 +373,46 @@ main {
   margin-left: 0.5em;
 }
 
-.skills__list {
-  max-width: 450px;
-  width: 95%;
-  margin: 0 auto;
+/* Grid layout for skills */
+.skills__grid {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.skills__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 30%; /* Makes each list take 1/3 of the space */
 }
 
 .skills__list-item {
-  margin: 0.5em;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
+
+.skill-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+
+
+/* Increase the font size of skill items and icons */
+.skill-item {
+  font-size: 1.2rem; /* Adjust the size of the text */
+  display: flex;
+  align-items: center;
+}
+
+.skill-icon {
+  font-size: 2rem; /* Adjust the icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
 
 .contact {
   flex-direction: column;
@@ -439,4 +488,5 @@ main {
   .scroll-container {
     display: none;
   }
+
 }
