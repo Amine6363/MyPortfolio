@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
   <title>Amine</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/png" href="images\favicon-32x32.png">
 
 </head>
 
@@ -63,6 +64,7 @@
         </a>
       </div>
 
+
       <!-- Projects -->
       <section id="projects" class="section projects">
         <h2 class="section__title">Projects</h2>
@@ -70,7 +72,7 @@
         <div class="projects__grid">
           <!-- Online Clothing Store -->
           <div class="project">
-            <img src="images\tiendaOnline.png" alt="Online Clothing Store" class="project__image">
+            <img src="images/tiendaOnline.png" alt="Online Clothing Store" class="project__image">
             <h3>Online Clothing Store</h3>
             <p class="project__description">
               A modern e-commerce platform designed to provide a seamless online shopping experience, featuring
@@ -82,70 +84,79 @@
               <li class="project__stack-item">MongoDB</li>
               <li class="project__stack-item">TailwindCSS</li>
             </ul>
-            <a aria-label="source code" class="link link--icon">
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a href="https://github.com/Amine6363/E-commerceStore" class="btn btn--outline">View Code</a>
+            <div class="project__footer">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Amine6363/E-commerceStore" target="_blank" class="btn btn--outline">View
+                Code</a>
+              <a href="docs/E-commerceStore.pdf" target="_blank" class="btn btn--outline">View Documentation</a>
+            </div>
           </div>
 
           <!-- Messaging App -->
           <div class="project">
-            <img src="images\image_php.png" alt="Messaging App" class="project__image">
+            <img src="images/image_php.png" alt="Messaging App" class="project__image">
             <h3>Messaging App</h3>
             <p class="project__description">
               A web-based messaging platform functioning like an email system, with secure user authentication, message
-              sending, and inbox management.
-
+              sending, and inbox management. Includes an admin panel to manage users and a user profile page for
+              personalized settings.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">PHP</li>
               <li class="project__stack-item">MySQL</li>
               <li class="project__stack-item">TailwindCSS</li>
             </ul>
-            <i aria-hidden="true" class="fab fa-github"></i>
-            <a href="https://github.com/Amine6363/WebMessagingApp_PHP" class="btn btn--outline">View Code</a>
+            <div class="project__footer">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Amine6363/WebMessagingApp_PHP" target="_blank" class="btn btn--outline">View
+                Code</a>
+              <a href="docs/WebMessagingApp_PHP.pdf" target="_blank" class="btn btn--outline">View Documentation</a>
+            </div>
           </div>
 
           <!-- Messaging App (Symfony Version) -->
           <div class="project">
-            <img src="images\image_symfony.png" alt="Messaging App (Symfony Version)" class="project__image">
+            <img src="images/image_symfony.png" alt="Messaging App (Symfony Version)" class="project__image">
             <h3>Messaging App (Symfony Version)</h3>
             <p class="project__description">
-              A scalable messaging application resembling an email system, built with Symfony, featuring advanced
-              database management and a clean, responsive design.
-
+              A scalable messaging application resembling an email system, built with Symfony. Features an admin panel
+              for user management, a user profile page, and advanced database management.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">Symfony</li>
               <li class="project__stack-item">MySQL</li>
               <li class="project__stack-item">Bootstrap</li>
             </ul>
-            <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
-            <a href="https://github.com/Amine6363/WebMessagingApp_Symfony" class="btn btn--outline">View Code</a>
+            <div class="project__footer">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Amine6363/WebMessagingApp_Symfony" target="_blank"
+                class="btn btn--outline">View Code</a>
+              <a href="docs/WebMessagingApp_Symfony.pdf" target="_blank" class="btn btn--outline">View Documentation</a>
+            </div>
           </div>
 
           <!-- News App -->
           <div class="project">
-            <img src="images\news.png" alt="News App" class="project__image">
+            <img src="images/news.png" alt="News App" class="project__image">
             <h3>News App</h3>
             <p class="project__description">
               A user-friendly news application built to deliver the latest news headlines and updates, with category
-              filtering and responsive design.
+              filtering, with data fetched from a news API.
             </p>
             <ul class="project__stack">
               <li class="project__stack-item">React</li>
               <li class="project__stack-item">Bootstrap</li>
             </ul>
-
-            <i aria-hidden="true" class="fab fa-github"></i>
-
-            <a href="https://github.com/Amine6363/NewsApp" class="btn btn--outline">View Code</a>
+            <div class="project__footer">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Amine6363/NewsApp" target="_blank" class="btn btn--outline">View Code</a>
+              <a href="docs/NewsApp.pdf" target="_blank" class="btn btn--outline">View Documentation</a>
+            </div>
           </div>
 
           <!-- Portfolio -->
           <div class="project">
-            <img src="images\portfolio.png" alt="Portfolio" class="project__image">
+            <img src="images/portfolio.png" alt="Portfolio" class="project__image">
             <h3>This Portfolio</h3>
             <p class="project__description">
               A personal portfolio built with HTML, CSS, and JavaScript to showcase my projects, skills, and
@@ -157,13 +168,34 @@
               <li class="project__stack-item">CSS</li>
               <li class="project__stack-item">JavaScript</li>
             </ul>
-            <i aria-hidden="true" class="fab fa-github"></i>
-            <a href="https://github.com/Amine6363/MyPortfolio" class="btn btn--outline">View Code</a>
+            <div class="project__footer">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Amine6363/MyPortfolio" target="_blank" class="btn btn--outline">View Code</a>
+              <a href="docs/MyPortfolio.pdf" target="_blank" class="btn btn--outline">View Documentation</a>
+            </div>
+          </div>
+
+          <!-- Weather App -->
+          <div class="project">
+            <img src="images/weather_app.png" alt="Weather App" class="project__image">
+            <h3>Weather App</h3>
+            <p class="project__description">
+              A weather application that provides real-time weather information based on user location or city search.
+              It features a clean and responsive design, with data fetched from a weather API.
+            </p>
+            <ul class="project__stack">
+              <li class="project__stack-item">JavaScript</li>
+              <li class="project__stack-item">HTML</li>
+              <li class="project__stack-item">CSS</li>
+            </ul>
+            <div class="project__footer">
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Amine6363/WeatherApp" target="_blank" class="btn btn--outline">View Code</a>
+              <a href="docs/WeatherApp.pdf" target="_blank" class="btn btn--outline">View Documentation</a>
+            </div>
           </div>
         </div>
       </section>
-
-
 
 
 
@@ -225,34 +257,47 @@
         </div>
       </section>
 
-
-
-
-
-      <!-- Contact -->
+      <!-- Contact Form-->
       <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:amine010mohamed@gmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
-        <p class="contact__email" style="margin-top: 20px;">amine010mohamed@gmail.com</p>
+        <h2 class="section__title">Contact Me!</h2>
+        <p class="contact__description">Fill out the form to send a message directly to my email.</p>
+        <!-- Contact Form -->
+        <div class="contact-container">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="0f352b5d-6c1a-4de6-879c-37dc14141972">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" required placeholder="Enter your message" rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--outline">Send Message</button>
+          </form>
+        </div>
       </section>
-  </main>
 
+      <footer class="footer">
+        <b>Created By Amine</b>
+      </footer>
 
-  <footer class="footer">
-    <b>Created By Amine</b>
-  </footer>
+      <div class="scroll-container">
+        <div class="scroll-top">
+          <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
 
-  <div class="scroll-container">
-    <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
-        <i aria-hidden="true" class="fas fa-arrow-up"></i>
-      </a>
-    </div>
-  </div>
-
-  <script src="./script.js"></script>
+      <script src="./script.js"></script>
 </body>
 
 </html>

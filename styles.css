@@ -266,6 +266,8 @@ main {
 .about__desc {
   font-size: 1rem;
   max-width: 600px;
+  text-align: justify;
+
 }
 
 .about__desc,
@@ -296,8 +298,18 @@ main {
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
   overflow: hidden; /* To ensure the image doesn't overflow */
+  height: 100%; /* Ensures uniform height for all cards */
+  justify-content: space-between; /* Ensures content is evenly distributed */
 }
+
+
+.project .btn--outline {
+  margin-top: auto; /* Forces button to align at the bottom */
+  align-self: center; /* Centers horizontally */}
   
+.project .btn {
+  align-self: center; /* Centers the button horizontally */
+}
 
 .project:hover {
   transform: translateY(-7px);
@@ -305,18 +317,22 @@ main {
 
 .project__image {
   width: 100%; /* Ensure the image takes full width of the container */
-  height: auto; /* Maintain aspect ratio */
+  height: 190px; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Add rounded corners */
   margin-bottom: 1.2em; /* Space between image and text */
+  object-fit: cover; /* Ensures images have the same size without distortion */
 }
 
 .project__description {
-  margin-top: 1em;
+  flex-grow: 1; /* Pushes other elements down */
   text-align: justify; /* Justifies the text */
+
 }
 
 .project__description {
   margin-top: 1em;
+  min-height: 80px; /* Ensures all descriptions are at least this tall */
+  text-align: justify; /* Justifies the text */
 }
 
 .project__stack {
@@ -324,6 +340,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   margin: 1.2em 0;
+  min-height: 40px; /* Ensures all tech stacks have the same height */
 }
 
 .project__stack-item {
@@ -337,6 +354,19 @@ main {
   padding: 0.5em 1em; /* Padding for spacing */
   transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
 }
+
+.project__footer {
+display: flex;
+flex-direction: column;  /* Stack buttons vertically */
+gap: 10px;  /* Adds space between the buttons */
+align-items: center;  /* Center align the buttons */
+margin-top: 1em;  /* Adds space above buttons */
+}
+
+.project__footer a {
+  width: 100%;  /* Makes the buttons the same width */
+  text-align: center;  /* Centers the text inside buttons */
+} 
 
 :root {
   --clr-fg-alt: #333; /* Default light mode foreground color */
@@ -384,7 +414,7 @@ body.dark .project__stack-item:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 30%; /* Makes each list take 1/3 of the space */
+  width: 33%; /* Makes each list take 1/3 of the space */
 }
 
 .skills__list-item {
@@ -394,11 +424,20 @@ body.dark .project__stack-item:hover {
   margin-bottom: 10px;
 }
 
+
 .skill-icon {
   font-size: 2rem;
   margin-right: 10px;
 }
 
+.skills__category-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--clr-primary);
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+  padding-left: 1em;
+}
 
 
 /* Increase the font size of skill items and icons */
@@ -420,7 +459,7 @@ body.dark .project__stack-item:hover {
 
 .footer {
   padding: 3em 0;
-  margin-top: 4em;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -440,53 +479,113 @@ body.dark .project__stack-item:hover {
   transition: transform 0.2s ease-in-out;
 }
 
-@media (max-width: 600px) {
-  .header {
-    height: 6em;
-  }
-
-  .section {
-    margin-top: 4em;
-  }
-
-  .nav__list {
-    flex-direction: column;
-    padding: 4em 0;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 5em;
-    background-color: var(--clr-bg);
-    width: 0;
-    overflow: hidden;
-    transition: width 0.2s ease-in-out;
-  }
-
-  .display-nav-list {
-    width: 100%;
-  }
-
-  .nav__list-item {
-    margin: 0.5em 0;
-  }
-
-  .nav__hamburger {
-    display: flex;
-    margin-left: 0.8em;
-  }
-
-  .about {
-    align-items: flex-start;
-    margin-top: 2em;
-  }
-
-  .footer {
-    padding: 2em;
-    margin-top: 3em;
-  }
-
-  .scroll-container {
-    display: none;
-  }
-
+/* Contact Form */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1 0px;
+  width: 500px;
+  margin-bottom: 20px;
 }
+
+.contact-form {
+  width: 100%;
+  max-width: 1000px; /* Increased the max-width for more space */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #2980b9;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.contact__email {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #555;
+}
+
+.contact__description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+body.dark .contact-form {
+  background-color: var(--clr-bg-alt);
+  color: var(--clr-fg);
+  box-shadow: var(--shadow);
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background-color: var(--clr-bg);
+  color: var(--clr-fg);
+  border: 1px solid var(--clr-fg-alt);
+}
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder {
+  color: rgba(189, 189, 221, 0.6); /* Lighter text for placeholders */
+}
+
+body.dark .contact-form button {
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+}
+
+body.dark .contact-form button:hover {
+  background-color: #7a8bcc; /* Slightly lighter hover effect */
+}
+
+body.dark .contact__email,
+body.dark .contact__description {
+  color: var(--clr-fg-alt);
+}
+
+
