@@ -46,3 +46,6 @@ To update the content, modify the following:
 - Skills Section: Edit the HTML code in the skills.html file.
 - Projects Section: Update the projects.html with new projects or links.
 - Contact Form: Customize the contact.html for your preferred form handler.
+
+🌍 Live Demo
+  https://amine6363.github.io/MyPortfolio/
